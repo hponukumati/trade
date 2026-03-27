@@ -62,7 +62,7 @@ CREATE TABLE IF NOT EXISTS public.trade_impact (
     region2 CHAR(2) NOT NULL,
     industry1 TEXT NOT NULL,
     industry2 TEXT NOT NULL,
-    impact_value NUMERIC(20,4) NOT NULL,
+    level NUMERIC(20,4) NOT NULL,
     tradeflow_type VARCHAR(20) NOT NULL,
     source_file VARCHAR(255),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,

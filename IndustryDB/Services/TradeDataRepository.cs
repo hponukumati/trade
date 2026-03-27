@@ -101,7 +101,7 @@ namespace IndustryDB.Services
 
                 "public.trade_impact" => @"
                     INSERT INTO public.trade_impact
-                    (year, region1, region2, industry1, industry2, impact_value, tradeflow_type, source_file)
+                    (year, region1, region2, industry1, industry2, level, tradeflow_type, source_file)
                     VALUES
                     (@Year, @Region1, @Region2, @Industry1, @Industry2, @Amount, @TradeflowType, @SourceFile)",
 
