@@ -1,5 +1,9 @@
 # Trade Data Import System
 
+Rust Endpoints are used in our "[exiobase/tradeflow](https://model.earth/exiobase/tradeflow/)" pull into SQL
+
+Alternative (but not finalized):
+
 .NET 8.0 web application for importing CSV trade data into PostgreSQL database.
 
 ## Quick Start
@@ -76,6 +80,9 @@ Web UI (progress tracking)
 1. `public.trade` - Main trade flow data
 2. `public.trade_employment` - Employment impacts
 3. `public.trade_factor` - Production factors
+
+These are redundant, so we're not adding as SQL tables:
+
 4. `public.trade_impact` - Economic impacts
 5. `public.trade_material` - Material flows
 6. `public.trade_resource` - Resource usage
