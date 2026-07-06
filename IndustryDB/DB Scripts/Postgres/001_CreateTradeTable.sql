@@ -42,7 +42,6 @@ CREATE TABLE public.factor (
 -- 3. trade
 -- =============================================
 CREATE TABLE public.trade (
-    id          BIGSERIAL PRIMARY KEY,
     trade_id    INTEGER      NOT NULL,
     year        SMALLINT     NOT NULL,
     region1     VARCHAR(10)  NOT NULL,
@@ -59,13 +58,3 @@ CREATE INDEX idx_trade_country       ON public.trade(country);
 CREATE INDEX idx_trade_flow_type     ON public.trade(flow_type);
 CREATE INDEX idx_trade_year_country  ON public.trade(year, country, flow_type);
 
--- =============================================
--- Trigger helper (reused by script 002)
--- =============================================
-CREATE OR REPLACE FUNCTION update_updated_at_column()
-RETURNS TRIGGER AS $$
-BEGIN
-    NEW.updated_at = CURRENT_TIMESTAMP;
-    RETURN NEW;
-END;
-$$ LANGUAGE plpgsql;

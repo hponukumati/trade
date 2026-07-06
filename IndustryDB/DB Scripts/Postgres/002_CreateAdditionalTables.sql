@@ -11,7 +11,6 @@
 -- 1. trade_factor
 -- =============================================
 CREATE TABLE public.trade_factor (
-    id          BIGSERIAL PRIMARY KEY,
     trade_id    INTEGER     NOT NULL,
     year        SMALLINT    NOT NULL,
     country     VARCHAR(10) NOT NULL,

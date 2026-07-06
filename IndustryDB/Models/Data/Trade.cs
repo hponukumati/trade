@@ -2,7 +2,6 @@ namespace IndustryDB.Models.Data
 {
     public class Trade
     {
-        public long Id { get; set; }
         public int TradeId { get; set; }
         public short Year { get; set; }
         public string Region1 { get; set; } = "";
